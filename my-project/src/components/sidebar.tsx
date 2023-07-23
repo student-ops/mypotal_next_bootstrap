@@ -13,7 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
 
   return (
     <div
-      className="col-sm-5 col-md-4 col-lg-3 bg-light position-fixed bg-dark py-3"
+      className="col-sm-5 col-5 col-md-4 col-lg-3 bg-light position-fixed bg-dark py-3"
       style={{
         overflow: "auto",
         height: "100vh",

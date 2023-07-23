@@ -17,7 +17,7 @@ const FixedSidebar: React.FC<SidebarProps> = ({
 
   return (
     <div
-      className="col-sm-5 col-md-4 col-lg-3 bg-light position-fixed bg-dark py-3"
+      className="col-6 col-sm-5 bg-light position-fixed bg-dark py-3"
       style={{
         top: "48px",
         overflow: "auto",
