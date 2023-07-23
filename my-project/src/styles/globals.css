@@ -105,17 +105,3 @@ a {
     color-scheme: dark;
   }
 }
-
-/* 
-.sidebar {
-  flex: 1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-.content {
-  flex: 3;
-  margin-left: 20%; /* Adjust this value to give enough space for the sidebar 
-} 
-*/

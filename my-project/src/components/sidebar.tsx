@@ -6,38 +6,43 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
+  const getClassName = (section: string) =>
+    `fs-4 text-center ${
+      activeSection === section ? "bg-white text-dark" : "text-white"
+    }`;
+
   return (
-    <Nav className="col-md-4  d-md-block bg-light sidebar">
-      <Nav.Item>
-        <Nav.Link
-          href="/home"
-          className={activeSection === "home" ? "active" : ""}
-        >
-          Home
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link
-          href="/link-1"
-          className={activeSection === "link1" ? "active" : ""}
-        >
-          Link 1
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link
-          href="/link-2"
-          className={activeSection === "link2" ? "active" : ""}
-        >
-          Link 2
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="disabled" disabled>
-          Disabled
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
+    <div
+      className="col-4 bg-light position-sticky bg-dark py-3"
+      style={{ top: 0, overflow: "auto" }}
+    >
+      <div className="fs2 text-center "></div>
+      <Nav className="d-flex flex-column align-items-center mx-auto w-100">
+        <Nav.Item className="w-100">
+          <Nav.Link href="#home" className={getClassName("home")}>
+            About
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item className="w-100">
+          <Nav.Link
+            href="#section-1"
+            className={getClassName("link1")}
+            style={{ borderTop: "1.5px solid #bfbfbf" }}
+          >
+            Links
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item className="w-100">
+          <Nav.Link
+            href="#section-2"
+            className={getClassName("link2")}
+            style={{ borderTop: "1.5px solid #bfbfbf" }}
+          >
+            Tech
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+    </div>
   );
 };
 

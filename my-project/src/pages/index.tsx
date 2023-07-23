@@ -1,62 +1,125 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Dropdown, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import React from "react";
+import { useInView } from "react-intersection-observer";
 import Sidebar from "../components/sidebar";
+import Footer from "@/components/footer";
 
-export default function Home() {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-  const homeRef = useRef(null);
-  const link1Ref = useRef(null);
-  const link2Ref = useRef(null);
+export default function HomePage() {
+  // Define observers for each section
+  const { ref: homeRef, inView: homeInView } = useInView({
+    threshold: 0.5,
+  });
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  const { ref: link1Ref, inView: link1InView } = useInView({
+    threshold: 0.5,
+  });
 
-    const { current: homeElement } = homeRef;
-    const { current: link1Element } = link1Ref;
-    const { current: link2Element } = link2Ref;
+  const { ref: link2Ref, inView: link2InView } = useInView({
+    threshold: 0.5,
+  });
 
-    if (homeElement) observer.observe(homeElement);
-    if (link1Element) observer.observe(link1Element);
-    if (link2Element) observer.observe(link2Element);
+  // Define the content of each section
+  const HomeContent = (
+    <div id="home" ref={homeRef}>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+      <p>aaaaaaaaaaaaaaaaaaaa</p>
+    </div>
+  );
 
-    // Cleanup on unmount
-    return () => {
-      if (homeElement) observer.unobserve(homeElement);
-      if (link1Element) observer.unobserve(link1Element);
-      if (link2Element) observer.unobserve(link2Element);
-    };
-  }, []);
+  const Link1Content = (
+    <div id="section-1" ref={link1Ref}>
+      {/* Your link-1 content goes here */}
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+    </div>
+  );
 
+  const Link2Content = (
+    <div id="section-2" ref={link2Ref}>
+      {/* Your link-2 content goes here */}
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+      <p>ccccccccccccccccccccccccc</p>
+    </div>
+  );
+
+  // Pass the currently visible section to the Sidebar component
   return (
-    <>
-      <div className="flex">
-        <Sidebar activeSection={activeSection} />
-        <p>Hello Bootstrap</p>
-
-        <div className="flex flex-cols">
-          <div id="home" ref={homeRef}>
-            {/* Your home content */}
-            <p>aaaaaaaaaaa</p>
-          </div>
-          <div id="link1" ref={link1Ref}>
-            {/* Your link1 content */}
-            <p>bbbbbbbbbbb</p>
-          </div>
-          <div id="link2" ref={link2Ref}>
-            {/* Your link2 content */}
-            <p>ccccccccccc</p>
-          </div>
-        </div>
+    <div className="d-flex flex-row-reverse vh-100 overflow-auto bg-light">
+      <Sidebar
+        activeSection={
+          homeInView
+            ? "home"
+            : link1InView
+            ? "link1"
+            : link2InView
+            ? "link2"
+            : null
+        }
+      />
+      <div id="container" className="col-md-8">
+        {HomeContent}
+        {Link1Content}
+        {Link2Content}
+        <Footer />
       </div>
-    </>
+    </div>
   );
 }
