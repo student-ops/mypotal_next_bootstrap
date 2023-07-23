@@ -2,6 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import Sidebar from "../components/sidebar";
 import Footer from "@/components/footer";
+import CustomComponent from "@/components/section";
 
 export default function HomePage() {
   // Define observers for each section
@@ -32,7 +33,7 @@ export default function HomePage() {
     </div>
   );
 
-  const Link1Content = (
+  const Section1Content = (
     <div id="section-1" ref={link1Ref}>
       {/* Your link-1 content goes here */}
       <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
@@ -85,7 +86,7 @@ export default function HomePage() {
     </div>
   );
 
-  const Link2Content = (
+  const Section2Content = (
     <div id="section-2" ref={link2Ref}>
       {/* Your link-2 content goes here */}
       <p>ccccccccccccccccccccccccc</p>
@@ -114,10 +115,10 @@ export default function HomePage() {
             : null
         }
       />
-      <div id="container" className="col-md-8">
+      <div id="container" className="col-md-8 px-2vw">
         {HomeContent}
-        {Link1Content}
-        {Link2Content}
+        <CustomComponent children={Section1Content} />
+        <CustomComponent children={Section2Content} />
         <Footer />
       </div>
     </div>
