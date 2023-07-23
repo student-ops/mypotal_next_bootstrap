@@ -1,8 +1,8 @@
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import Sidebar from '../components/sidebar';
+import React from "react";
+import { useInView } from "react-intersection-observer";
+import Sidebar from "../components/fixedsidebar";
 
-export default function HomePage(){
+export default function HomePage() {
   // Define observers for each section
   const { ref: homeRef, inView: homeInView } = useInView({
     threshold: 0,
@@ -66,10 +66,13 @@ export default function HomePage(){
     <>
       <Sidebar
         activeSection={
-          homeInView ? 'home' :
-          link1InView ? 'link1' :
-          link2InView ? 'link2' :
-          null
+          homeInView
+            ? "home"
+            : link1InView
+            ? "link1"
+            : link2InView
+            ? "link2"
+            : null
         }
       />
       {HomeContent}
@@ -77,4 +80,4 @@ export default function HomePage(){
       {Link2Content}
     </>
   );
-};
+}

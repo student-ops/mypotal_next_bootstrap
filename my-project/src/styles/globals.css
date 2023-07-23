@@ -105,3 +105,30 @@ a {
     color-scheme: dark;
   }
 }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.sidebar-enter {
+  animation: slideIn 0.5s forwards;
+}
+
+.sidebar-exit {
+  animation: slideOut 0.5s forwards;
+}
+
