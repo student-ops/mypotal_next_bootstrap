@@ -9,15 +9,15 @@ import Sidebar from "@/components/sidebar";
 
 export default function HomePage() {
   const { ref: homeRef, inView: homeInView } = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
   });
 
   const { ref: link1Ref, inView: link1InView } = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
   });
 
   const { ref: link2Ref, inView: link2InView } = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
   });
 
   const HomeContent = (
@@ -169,6 +169,7 @@ export default function HomePage() {
                 : null
             }
             isSidebarOpen={isSidebarOpen}
+            setIsSidebarOpen={handleMenuClick}
           />
         </CSSTransition>
         <div

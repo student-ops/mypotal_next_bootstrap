@@ -1,14 +1,17 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
+import { Link } from "react-scroll";
 
 interface SidebarProps {
   activeSection: string | null;
   isSidebarOpen: boolean;
+  setIsSidebarOpen: () => void;
 }
 
 const FixedSidebar: React.FC<SidebarProps> = ({
   activeSection,
   isSidebarOpen,
+  setIsSidebarOpen,
 }) => {
   const getClassName = (section: string) =>
     `fs-4 text-center ${
@@ -24,6 +27,7 @@ const FixedSidebar: React.FC<SidebarProps> = ({
         height: "calc(100vh - 48px)",
         zIndex: 1,
       }}
+      onClick={setIsSidebarOpen}
     >
       {isSidebarOpen ? (
         <>
