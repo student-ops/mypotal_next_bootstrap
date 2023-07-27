@@ -6,6 +6,7 @@ import CustomComponent from "@/components/section";
 import Header from "@/components/header";
 import { CSSTransition } from "react-transition-group";
 import Sidebar from "@/components/sidebar";
+import MainSections from "@/components/main_sections";
 
 export default function HomePage() {
   const { ref: homeRef, inView: homeInView } = useInView({
@@ -21,16 +22,8 @@ export default function HomePage() {
   });
 
   const HomeContent = (
-    <div id="home" ref={homeRef}>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaa</p>
+    <div id="home" ref={homeRef} style={{ paddingLeft: "5%" }} className="py-3">
+      {MainSections[0]}
     </div>
   );
 
@@ -141,10 +134,12 @@ export default function HomePage() {
       />
       <div id="container" className="w-100 px-2vw">
         <h1>FullScreen</h1>
-        {HomeContent}
-        <CustomComponent children={Section1Content} />
-        <CustomComponent children={Section2Content} />
-        <Footer />
+        <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
+          {HomeContent}
+          <CustomComponent children={Section1Content} />
+          <CustomComponent children={Section2Content} />
+          <Footer />
+        </div>
       </div>
     </div>
   );

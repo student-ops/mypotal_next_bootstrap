@@ -5,14 +5,15 @@ import { Link } from "react-scroll";
 interface SidebarProps {
   activeSection: string | null;
   isSidebarOpen: boolean;
-  setIsSidebarOpen: () => void;
 }
 
 const FixedSidebar: React.FC<SidebarProps> = ({
   activeSection,
   isSidebarOpen,
-  setIsSidebarOpen,
 }) => {
+  const setIsSidebarOpen = () => {
+    isSidebarOpen = !isSidebarOpen;
+  };
   const getClassName = (section: string) =>
     `fs-4 text-center ${
       activeSection === section ? "bg-white text-dark" : "text-white"
@@ -44,12 +45,22 @@ const FixedSidebar: React.FC<SidebarProps> = ({
                 className={getClassName("link1")}
                 style={{ borderTop: "1.5px solid #bfbfbf" }}
               >
-                Links
+                Likes
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item className="w-100">
+              <Nav.Link
+                href="#section-2"
+                className={getClassName("link2")}
+                style={{ borderTop: "1.5px solid #bfbfbf" }}
+              >
+                MyWorks
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="w-100">
               <Nav.Link
-                href="#section-2"
+                href="#section-3"
                 className={getClassName("link2")}
                 style={{ borderTop: "1.5px solid #bfbfbf" }}
               >

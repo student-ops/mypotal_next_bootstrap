@@ -6,6 +6,7 @@ import CustomComponent from "@/components/section";
 import Header from "@/components/header";
 import { CSSTransition } from "react-transition-group";
 import Sidebar from "@/components/sidebar";
+import MainSections from "@/components/main_sections";
 import { Element } from "react-scroll";
 
 export default function HomePage() {
@@ -22,20 +23,10 @@ export default function HomePage() {
   });
 
   const HomeContent = (
-    <Element name="home">
-      <div id="home" ref={homeRef}>
-        {/* Your home content goes here */}
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaa</p>
-      </div>
-    </Element>
+    <div id="home" ref={homeRef}>
+      {/* Your home content goes here */}
+      {MainSections[0]}
+    </div>
   );
 
   const Section1Content = (

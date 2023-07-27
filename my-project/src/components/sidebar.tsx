@@ -34,12 +34,22 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
               className={getClassName("link1")}
               style={{ borderTop: "1.5px solid #bfbfbf" }}
             >
-              Links
+              Likes
+            </Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item className="w-100">
+            <Nav.Link
+              href="#section-2"
+              className={getClassName("link2")}
+              style={{ borderTop: "1.5px solid #bfbfbf" }}
+            >
+              MyWorks
             </Nav.Link>
           </Nav.Item>
           <Nav.Item className="w-100">
             <Nav.Link
-              href="#section-2"
+              href="#section-3"
               className={getClassName("link2")}
               style={{ borderTop: "1.5px solid #bfbfbf" }}
             >
