@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import { CSSTransition } from "react-transition-group";
 import Sidebar from "@/components/sidebar";
 import MainSections from "@/components/main_sections";
+import { Main } from "next/document";
 
 export default function HomePage() {
   const { ref: homeRef, inView: homeInView } = useInView({
@@ -29,69 +30,14 @@ export default function HomePage() {
 
   const Section1Content = (
     <div id="section-1" ref={link1Ref}>
-      {/* Your link-1 content goes here */}
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
-      <p>bbbbbbbbbbbbbbbbbbbbbbbbb</p>
+      {MainSections[1]}
     </div>
   );
 
   const Section2Content = (
     <div id="section-2" ref={link2Ref}>
       {/* Your link-2 content goes here */}
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
-      <p>ccccccccccccccccccccccccc</p>
+      {MainSections[2]}
     </div>
   );
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
