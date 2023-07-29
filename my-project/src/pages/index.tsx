@@ -21,7 +21,12 @@ export default function HomePage() {
   const { ref: link2Ref, inView: link2InView } = useInView({
     threshold: 0.5,
   });
-
+  const { ref: link3Ref, inView: link3InView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: link4Ref, inView: link4InView } = useInView({
+    threshold: 0.5,
+  });
   const HomeContent = (
     <div id="home" ref={homeRef} style={{ paddingLeft: "5%" }} className="py-3">
       {MainSections[0]}
@@ -40,6 +45,17 @@ export default function HomePage() {
       {MainSections[2]}
     </div>
   );
+  const Section3Content = (
+    <div id="section-3" ref={link3Ref}>
+      {MainSections[3]}
+    </div>
+  );
+  const Section4Content = (
+    <div id="section-4" ref={link4Ref}>
+      {MainSections[4]}
+    </div>
+  );
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
   const handleMenuClick = () => {
@@ -81,9 +97,13 @@ export default function HomePage() {
       <div id="container" className="w-100 px-2vw">
         <h1>FullScreen</h1>
         <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
-          {HomeContent}
-          <CustomComponent children={Section1Content} />
-          <CustomComponent children={Section2Content} />
+          <div id="content-container">
+            {HomeContent}
+            <CustomComponent children={Section1Content} />
+            <CustomComponent children={Section2Content} />
+            <CustomComponent children={Section3Content} />
+            <CustomComponent children={Section4Content} />
+          </div>
           <Footer />
         </div>
       </div>
