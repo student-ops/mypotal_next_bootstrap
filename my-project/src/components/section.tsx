@@ -6,7 +6,7 @@ interface CustomComponentProps {
 
 const CustomComponent: React.FC<CustomComponentProps> = ({ children }) => {
   return (
-    <div className="w-100" style={{ borderTop: "solid 3px #d1d1d1" }}>
+    <div className="w-100 py-5 my-5" style={{ borderTop: "solid 3px #d1d1d1" }}>
       {children}
     </div>
   );

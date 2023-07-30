@@ -2,7 +2,7 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 
 interface SidebarProps {
-  activeSection: string | null;
+  activeSection: string;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {

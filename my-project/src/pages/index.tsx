@@ -7,7 +7,6 @@ import Header from "@/components/header";
 import { CSSTransition } from "react-transition-group";
 import Sidebar from "@/components/sidebar";
 import MainSections from "@/components/main_sections";
-import { Main } from "next/document";
 
 export default function HomePage() {
   const { ref: homeRef, inView: homeInView } = useInView({
@@ -87,11 +86,15 @@ export default function HomePage() {
         activeSection={
           homeInView
             ? "home"
-            : link1InView
+            : homeInView
             ? "link1"
-            : link2InView
+            : link1InView
             ? "link2"
-            : null
+            : link2InView
+            ? "link3"
+            : link3InView
+            ? "link4"
+            : link4InView
         }
       />
       <div id="container" className="w-100 px-2vw">
