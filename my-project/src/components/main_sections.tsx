@@ -23,21 +23,21 @@ const Section2 = (
 const Section3 = (
   <Container>
     <h1>MyWorks</h1>
-    <Row className="justify-content-center">
-      <Col xs="auto">
-        <div>
-          <img
-            alt="Top Langs"
-            height="200px"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=student-ops&layout=compact&count_private=true&show_icons=true&theme=transparent"
-          />
-          <img
-            alt="github stats"
-            src="https://github-readme-stats.vercel.app/api?username=student-ops&show_icons=true&theme=transparent"
-          />
-        </div>
-      </Col>
-    </Row>
+    {/* <Row className="justify-content-center"> */}
+    {/* <Col xs="auto"> */}
+    <div>
+      <img
+        alt="Top Langs"
+        height="200px"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=student-ops&layout=compact&count_private=true&show_icons=true&bg_color=00000000"
+      />
+      <img
+        alt="github stats"
+        src="https://github-readme-stats.vercel.app/api?username=student-ops&show_icons=true&bg_color=00000000"
+      />
+    </div>
+    {/* </Col> */}
+    {/* </Row> */}
   </Container>
 );
 
