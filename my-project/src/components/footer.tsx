@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         borderTop: "0",
         color: "#bababa",
         overflow: "hidden",
-        padding: "5em 0 4em 0",
+        padding: "6em 0 5em 0",
         fontSize: "0.9em",
       }}
     >

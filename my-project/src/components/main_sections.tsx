@@ -15,9 +15,6 @@ const Section2 = (
   <div>
     <h1>Likes</h1>
     <p>IT、海、格闘技、将棋、ゲーム等色々好きです</p>
-    <p className="my-5 py-5">aaaaaaaaaaaaaaaaaa</p>
-    <p className="my-5 py-5">aaaaaaaaaaaaaaaaaa</p>
-    <p className="my-5 py-5">aaaaaaaaaaaaaaaaaa</p>
   </div>
 );
 const Section3 = (

@@ -31,7 +31,6 @@ export default function HomePage() {
 
   const Section1Content = (
     <div id="section-1" ref={link1Ref}>
-      <p>sec1</p>
       {MainSections[1]}
     </div>
   );
