@@ -23,9 +23,6 @@ export default function HomePage() {
   const { ref: link3Ref, inView: link3InView } = useInView({
     threshold: 0.5,
   });
-  const { ref: link4Ref, inView: link4InView } = useInView({
-    threshold: 0.5,
-  });
   const HomeContent = (
     <div id="home" ref={homeRef} style={{ paddingLeft: "5%" }} className="py-3">
       {MainSections[0]}
@@ -34,6 +31,7 @@ export default function HomePage() {
 
   const Section1Content = (
     <div id="section-1" ref={link1Ref}>
+      <p>sec1</p>
       {MainSections[1]}
     </div>
   );
@@ -47,11 +45,6 @@ export default function HomePage() {
   const Section3Content = (
     <div id="section-3" ref={link3Ref}>
       {MainSections[3]}
-    </div>
-  );
-  const Section4Content = (
-    <div id="section-4" ref={link4Ref}>
-      {MainSections[4]}
     </div>
   );
 
@@ -86,15 +79,13 @@ export default function HomePage() {
         activeSection={
           homeInView
             ? "home"
-            : homeInView
-            ? "link1"
             : link1InView
-            ? "link2"
+            ? "link1"
             : link2InView
-            ? "link3"
+            ? "link2"
             : link3InView
-            ? "link4"
-            : link4InView
+            ? "link3"
+            : ""
         }
       />
       <div id="container" className="w-100 px-2vw">
@@ -105,7 +96,6 @@ export default function HomePage() {
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
             <CustomComponent children={Section3Content} />
-            <CustomComponent children={Section4Content} />
           </div>
           <Footer />
         </div>
@@ -130,6 +120,8 @@ export default function HomePage() {
                 ? "link1"
                 : link2InView
                 ? "link2"
+                : link3InView
+                ? "link3"
                 : null
             }
             isSidebarOpen={isSidebarOpen}
@@ -140,8 +132,6 @@ export default function HomePage() {
           className={isSidebarOpen ? "col-md-8 px-2vw" : "w-100 px-2vw"}
         >
           {HomeContent}
-          <CustomComponent children={Section1Content} />
-          <CustomComponent children={Section2Content} />
           <Footer />
         </div>
       </div>

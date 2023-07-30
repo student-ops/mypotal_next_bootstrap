@@ -61,7 +61,7 @@ const FixedSidebar: React.FC<SidebarProps> = ({
             <Nav.Item className="w-100">
               <Nav.Link
                 href="#section-3"
-                className={getClassName("link2")}
+                className={getClassName("link3")}
                 style={{ borderTop: "1.5px solid #bfbfbf" }}
               >
                 Tech

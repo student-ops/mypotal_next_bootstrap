@@ -2,10 +2,11 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 
 interface SidebarProps {
-  activeSection: string;
+  activeSection: string | boolean;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
+  console.log(activeSection);
   const getClassName = (section: string) =>
     `fs-4 text-center ${
       activeSection === section ? "bg-white text-dark" : "text-white"
@@ -50,7 +51,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
           <Nav.Item className="w-100">
             <Nav.Link
               href="#section-3"
-              className={getClassName("link2")}
+              className={getClassName("link3")}
               style={{ borderTop: "1.5px solid #bfbfbf" }}
             >
               Tech
