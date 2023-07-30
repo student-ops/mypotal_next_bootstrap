@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import Image from "next/image";
 
 type Repo = {
   name: string;
@@ -30,7 +31,9 @@ const RepoCard: React.FC<CardProps> = ({ repo }) => {
     const usagePercent = (bytes / totalBytes) * 100;
     const color = languageColors[lang] || "#cccccc";
     const style = { backgroundColor: color };
-    return <ProgressBar key={lang} style={style} now={usagePercent} />;
+    return (
+      <ProgressBar key={lang} style={style} label={lang} now={usagePercent} />
+    );
   });
 
   const languageNames = Object.keys(repo.languages).map((lang) => (
@@ -49,28 +52,42 @@ const RepoCard: React.FC<CardProps> = ({ repo }) => {
   ));
 
   return (
-    <Card style={{ width: "18rem", margin: "1rem" }}>
-      <Card.Body>
-        <Card.Title>{repo.name}</Card.Title>
-        <Card.Text>{repo.description}</Card.Text>
+    <>
+      <img
+        alt="Top Langs"
+        height="200px"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=student-ops&layout=compact&count_private=true&show_icons=true&theme=transparent"
+      />
+
+      <img
+        alt="github stats"
+        height="150px"
+        src="https://github-readme-stats.vercel.app/api?username=student-ops&show_icons=true&theme=transparent"
+      />
+      <Card style={{ width: "18rem", margin: "1rem", padding: "1em" }}>
+        <Card.Body>
+          <Card.Title>{repo.name}</Card.Title>
+          <Card.Text>{repo.description}</Card.Text>
+        </Card.Body>
+        <ListGroup variant="flush">
+          <ListGroup.Item>
+            <h5>Languages used:</h5>
+            <ProgressBar>{languageBars}</ProgressBar>
+            {/* add color point */}
+            <div>{languageNames}</div>
+          </ListGroup.Item>
+        </ListGroup>
         <Button
           variant="primary"
           href={repo.html_url}
           target="_blank"
           rel="noopener noreferrer"
+          style={{ marginTop: "1em" }}
         >
           Go to repository
         </Button>
-      </Card.Body>
-      <ListGroup variant="flush">
-        <ListGroup.Item>
-          <h5>Languages used:</h5>
-          <ProgressBar>{languageBars}</ProgressBar>
-          {/* add color point */}
-          <div>{languageNames}</div>
-        </ListGroup.Item>
-      </ListGroup>
-    </Card>
+      </Card>
+    </>
   );
 };
 

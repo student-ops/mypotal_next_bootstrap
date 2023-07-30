@@ -1,3 +1,5 @@
+import { Container, Row, Col } from "react-bootstrap";
+
 const Section1 = (
   <div>
     <p>
@@ -17,12 +19,28 @@ const Section2 = (
     <p>IT、海、格闘技、将棋、ゲーム等色々好きです</p>
   </div>
 );
+
 const Section3 = (
-  <div>
+  <Container>
     <h1>MyWorks</h1>
-    <p></p>
-  </div>
+    <Row className="justify-content-center">
+      <Col xs="auto">
+        <div>
+          <img
+            alt="Top Langs"
+            height="200px"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=student-ops&layout=compact&count_private=true&show_icons=true&theme=transparent"
+          />
+          <img
+            alt="github stats"
+            src="https://github-readme-stats.vercel.app/api?username=student-ops&show_icons=true&theme=transparent"
+          />
+        </div>
+      </Col>
+    </Row>
+  </Container>
 );
+
 const Section4 = (
   <div>
     <h1>Tech</h1>
