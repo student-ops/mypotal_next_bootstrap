@@ -24,7 +24,7 @@ export default function HomePage() {
     threshold: 0.5,
   });
   const HomeContent = (
-    <div id="home" ref={homeRef} className="py-3">
+    <div id="home" ref={homeRef} className="pt-5 pb-3">
       {MainSections[0]}
     </div>
   );
@@ -88,7 +88,6 @@ export default function HomePage() {
         }
       />
       <div id="container" className="w-100 px-2vw">
-        <h1>FullScreen</h1>
         <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
           <div id="content-container">
             {HomeContent}
@@ -130,7 +129,12 @@ export default function HomePage() {
           id="container"
           className={isSidebarOpen ? "col-md-8 px-2vw" : "w-100 px-2vw"}
         >
-          {HomeContent}
+          <div id="content-container mt-5" style={{ paddingTop: "48px" }}>
+            {HomeContent}
+            <CustomComponent children={Section1Content} />
+            <CustomComponent children={Section2Content} />
+            <CustomComponent children={Section3Content} />
+          </div>
           <Footer />
         </div>
       </div>
