@@ -132,3 +132,19 @@ a {
   animation: slideOut 0.5s forwards;
 }
 
+.custom-icon {
+  font-size: 0.6rem;
+  color: white;
+  background-color: black;
+  padding: 12px;
+  border-radius: 50%;
+  width: 26px; /* 丸の幅 */
+  height: 26px; /* 丸の高さ */
+  display: inline-flex; /* 縦方向に中央揃えするため */
+  align-items: center; /* 縦方向に中央揃えするため */
+  justify-content: center; /* 横方向に中央揃えするため */
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}

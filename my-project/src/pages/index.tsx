@@ -24,7 +24,7 @@ export default function HomePage() {
     threshold: 0.5,
   });
   const HomeContent = (
-    <div id="home" ref={homeRef} style={{ paddingLeft: "5%" }} className="py-3">
+    <div id="home" ref={homeRef} className="py-3">
       {MainSections[0]}
     </div>
   );
