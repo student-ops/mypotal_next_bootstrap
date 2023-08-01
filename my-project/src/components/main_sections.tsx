@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 import { ListGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Container, Row, Col, Image } from "react-bootstrap";
+
 import {
   faCode,
   faCubes,
@@ -8,10 +10,10 @@ import {
   faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { Container, Row, Col, Image } from "react-bootstrap";
 const Section1 = (
   <div>
     <h1 className="fw-bold fs-2 mb-3">こんにちは世界!! 長崎から</h1>
+
     <p>
       ITと海が好きな情報系学生です。 <br />
       OSSやクラウド技術が特に好きです。
