@@ -132,12 +132,6 @@ export default function HomePage() {
           className={isSidebarOpen ? "col-md-8 px-2vw" : "w-100 px-2vw"}
         >
           <div id="content-container mt-5" style={{ paddingTop: "48px" }}>
-            <Image
-              src="/effosition_app.png"
-              alt="Effortion"
-              width="100%"
-              className="rounded mt-2 mb-3"
-            />
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
