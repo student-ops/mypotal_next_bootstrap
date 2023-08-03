@@ -12,7 +12,7 @@ import {
 
 const Section1 = (
   <div>
-    <h1 className="fw-bold fs-2 mb-3">こんにちは世界!! 長崎から</h1>
+    <h1 className="fw-bold fs-2 mb-3">長崎から Hello,World!</h1>
 
     <p>
       ITと海が好きな情報系学生です。 <br />
@@ -38,12 +38,10 @@ const Section3 = (
     {/* <Row className="justify-content-center"> */}
     {/* <Col xs="auto"> */}
     <Container>
-      <p>
-        個人開発で作成したポートフォリオです。ソースコードも同じ名前でgithubに公開しています。
+      <p className="pb-3">
+        個人開発で作成したポートフォリオです。ソースコードも同じ名前でGitHubに公開しています。
       </p>
-      <a href="https://app.croud-crab.com" className="image">
-        <Image src="public/effosition_app.png" alt="" />
-      </a>
+      {/* <div className="inner py-3" style={{ borderTop: "solid 1px #d1d1d1" }}> */}
       <div className="">
         <div className="title_github d-flex justify-content-between ">
           <a
@@ -62,11 +60,23 @@ const Section3 = (
             className="github_link text-info text-decoration-underline"
             href="https://github.com/student-ops/efforsiton"
           >
-            Github リポジトリ
+            GitHub リポジトリ
           </a>
         </div>
-        <p>
-          github、chatgpt apiと密に連動した開発者向けのタスク管理アプリです。
+        <a href="https://app.croud-crab.com">
+          <Image
+            src="/effosition_app.png"
+            alt="Effortion"
+            width="100%"
+            className="rounded mt-2 mb-3"
+          />
+        </a>
+
+        <p className="pb-4">
+          <span className="fw-bold">
+            EfforsitionはGitHub、chatgpt
+            apiと密に連動した開発者向けのタスク管理アプリです。
+          </span>
           <br />
           cahtgpt
           apiを使用してコードの差分から実装された機能を推測し、開発の進捗状況を把握することが目的です。
@@ -76,10 +86,9 @@ const Section3 = (
           検知した更新をもとにアプリ内で作成したタスクの達成を自動で判定、管理します。
         </p>
       </div>
-      <a href="#" className="image">
-        <Image src="public/pic01.jpg" alt="" />
-      </a>
-      <div className="inner">
+      <a href="#" className="image"></a>
+      <div className="inner py-3" style={{ borderTop: "solid 1px #d1d1d1" }}>
+        {/* <div className="inner "> */}
         <div className="title_github d-flex  justify-content-between">
           <a href="#" target="_blank" className="image">
             <h4>Goチャットサービス</h4>
@@ -89,19 +98,16 @@ const Section3 = (
             className="github_link text-info text-decoration-underline"
             href="https://github.com/student-ops/recuruit"
           >
-            Github リポジトリ
+            GitHub リポジトリ
           </a>
         </div>
         <p>
-          初めて作ったwebアプリです。一般的な掲示板でgoとpostgresのみで実装しています。
+          初めて作ったWebアプリです。一般的な掲示板でGoとPostgresのみで実装しています。
           <br />
           セッション認証、ログイン機能などwebアプリの基本的な機能の実装方法を学習しました。
         </p>
       </div>
-      <a href="#" className="image">
-        <Image src="public/pic01.jpg" alt="" />
-      </a>
-      <div className="inner">
+      <div className="inner py-3" style={{ borderTop: "solid 1px #d1d1d1" }}>
         <div className="title_github d-flex  justify-content-between">
           <a href="#" target="_blank" className="image">
             <h4>Line Openai bot</h4>
@@ -111,12 +117,12 @@ const Section3 = (
             className="github_link text-info text-decoration-underline"
             href="https://github.com/student-ops/line_api_test"
           >
-            Github リポジトリ
+            GitHub リポジトリ
           </a>
         </div>
         <p>
-          openai nodesdkを使用して実装しました。lineトークからopenai
-          chatgpt,dalleにアクセスできます。
+          Openai Nodesdkを使用して実装しました。LineトークからOpenAIの
+          ChatGPT,Dalleにアクセスできます。
         </p>
       </div>
     </Container>

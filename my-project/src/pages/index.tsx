@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import { CSSTransition } from "react-transition-group";
 import Sidebar from "@/components/sidebar";
 import MainSections from "@/components/main_sections";
+import { Image } from "react-bootstrap";
 
 export default function HomePage() {
   const { ref: homeRef, inView: homeInView } = useInView({
@@ -73,7 +74,7 @@ export default function HomePage() {
   // Define the content of each section
 
   const FullScreen = (
-    <div className="d-flex flex-row-reverse vh-100 w-100 overflow-auto bg-light">
+    <div className="d-flex flex-row-reverse vh-100 w-100 overflow-auto  bg-light">
       <Sidebar
         activeSection={
           homeInView
@@ -90,6 +91,7 @@ export default function HomePage() {
       <div id="container" className="w-100 px-2vw">
         <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
           <div id="content-container">
+            <Image src="/banner.jpg" alt="Effortion" width="100%" />
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
@@ -130,6 +132,12 @@ export default function HomePage() {
           className={isSidebarOpen ? "col-md-8 px-2vw" : "w-100 px-2vw"}
         >
           <div id="content-container mt-5" style={{ paddingTop: "48px" }}>
+            <Image
+              src="/effosition_app.png"
+              alt="Effortion"
+              width="100%"
+              className="rounded mt-2 mb-3"
+            />
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
