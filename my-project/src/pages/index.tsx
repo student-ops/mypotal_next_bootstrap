@@ -7,7 +7,6 @@ import Header from "@/components/header";
 import { CSSTransition } from "react-transition-group";
 import Sidebar from "@/components/sidebar";
 import MainSections from "@/components/main_sections";
-import { Image } from "react-bootstrap";
 
 export default function HomePage() {
   const { ref: homeRef, inView: homeInView } = useInView({
