@@ -26,7 +26,7 @@ jobs:
       # 1. コードをチェックアウト
       - uses: actions/checkout@v3
         with:
-          path: /my-project
+          path: my-project
 
       # 2. 必要なツールをセットアップ
       - uses: oven-sh/setup-bun@v1
