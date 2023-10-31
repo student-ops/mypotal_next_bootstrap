@@ -12,7 +12,7 @@ import {
 
 const Section1 = (
   <div>
-    <h1 className="fw-bold fs-2 mb-3">こんにちは世界!! 長崎から</h1>
+    <h1 className="fw-bold fs-2 mb-3">Hello World!!</h1>
 
     <p>
       ITと海が好きな情報系学生です。 <br />
@@ -28,7 +28,7 @@ const Section1 = (
 const Section2 = (
   <div>
     <h1 className="fw-bold fs-2 mb-3">Likes</h1>
-    <p>IT、海、格闘技、将棋、ゲーム等色々好きです</p>
+    <p>IT、将棋、格闘技、ゲーム等が好きです</p>
   </div>
 );
 
@@ -66,12 +66,12 @@ const Section3 = (
           </a>
         </div>
         <p>
-          github、chatgpt apiと密に連動した開発者向けのタスク管理アプリです。
+          Github、ChatGPT APIと密に連動した開発者向けのタスク管理アプリです。
           <br />
           cahtgpt
           apiを使用してコードの差分から実装された機能を推測し、開発の進捗状況を把握することが目的です。
           <br />
-          ユーザーはgithubアカウントでサインインし、webhookを使用してレポジトリの更新を検知します。
+          ユーザーはGithubアカウントでサインインし、Webhookを使用してレポジトリの更新を検知します。
           <br />
           検知した更新をもとにアプリ内で作成したタスクの達成を自動で判定、管理します。
         </p>
