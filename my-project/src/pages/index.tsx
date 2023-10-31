@@ -74,7 +74,7 @@ export default function HomePage() {
   // Define the content of each section
 
   const FullScreen = (
-    <div className="d-flex flex-row-reverse vh-100 w-100 overflow-auto bg-light">
+    <div className="d-flex flex-row-reverse vh-100 w-100 overflow-auto  bg-light">
       <Sidebar
         activeSection={
           homeInView
@@ -91,6 +91,7 @@ export default function HomePage() {
       <div id="container" className="w-100 px-2vw">
         <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
           <div id="content-container">
+            <Image src="/banner.jpg" alt="Effortion" width="100%" />
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />

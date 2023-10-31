@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 
 interface SidebarProps {
-  activeSection: string | boolean;
+  activeSection: string | null;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
