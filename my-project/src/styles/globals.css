@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -147,4 +147,22 @@ a {
 
 .no-margin-bottom {
   margin-bottom: 0;
+}
+
+#bannerImage {
+  height: 10vh; /* vh stands for "viewport height" and 10vh is 10% of the viewport height */
+  width: 100%; /* This will maintain the image's aspect ratio */
+  /* display: block; This will remove any default margins from the image */
+}
+
+@media (max-height: 1080px) {
+  #bannerImage {
+    height: 16vh;
+  }
+}
+
+@media (max-height: 800px) {
+  #bannerImage {
+    height: 20vh;
+  }
 }

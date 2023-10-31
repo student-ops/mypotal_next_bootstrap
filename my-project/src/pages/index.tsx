@@ -91,7 +91,7 @@ export default function HomePage() {
       <div id="container" className="w-100 px-2vw">
         <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
           <div id="content-container">
-            <Image src="/banner.jpg" alt="Effortion" width="100%" />
+            <Image src="/banner.jpg" alt="Effortion" id="bannerImage" />
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
