@@ -34,10 +34,14 @@ jobs:
         with:
           aws-region: "ap-northeast-1"
           role-to-assume: ${{ env.ROLE_TO_ASSUME }} # ここで変数を参照
+
       # 3. ビルド処理
-      - run: bun install
-      - run: bunx next build
-      - run: bun next export
+      - name: Install and Build in my-project directory
+        run: |
+          cd my-project
+          bun install
+          bunx next build
+          bun next export
 
       # 4. S3にアップロード
-      - run: aws s3 sync ./out s3://${{ env.S3_BUCKET_NAME }}/src
+      - run: aws s3 sync ./my-project/out s3://${{ env.S3_BUCKET_NAME }}/src
