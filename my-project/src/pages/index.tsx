@@ -39,12 +39,12 @@ export default function HomePage() {
   const Section2Content = (
     <div id="section-2" ref={link2Ref}>
       {/* Your link-2 content goes here */}
-      {MainSections[2]}
+      {MainSections[3]}
     </div>
   );
   const Section3Content = (
     <div id="section-3" ref={link3Ref}>
-      {MainSections[3]}
+      {MainSections[2]}
     </div>
   );
 
