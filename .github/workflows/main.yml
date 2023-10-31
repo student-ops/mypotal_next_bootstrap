@@ -25,13 +25,10 @@ jobs:
     steps:
       # 1. コードをチェックアウト
       - uses: actions/checkout@v3
-        with:
-          path: my-project
       - name: List directory contents
         run: |
           ls -la
           pwd
-
       # 2. 必要なツールをセットアップ
       - uses: oven-sh/setup-bun@v1
       - uses: aws-actions/configure-aws-credentials@v1
