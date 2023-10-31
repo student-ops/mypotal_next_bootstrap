@@ -17,6 +17,11 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
 
+    # 環境変数の設定
+    env:
+      ROLE_TO_ASSUME: "arn:aws:iam::123358216469:role/GithubS3UploaderRole"
+      S3_BUCKET_NAME: "my-potal-static-content"
+
     steps:
       # 1. コードをチェックアウト
       - uses: actions/checkout@v3
@@ -26,12 +31,11 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: "ap-northeast-1"
-          role-to-assume: ""
-
+          role-to-assume: ${{ env.ROLE_TO_ASSUME }} # ここで変数を参照
       # 3. ビルド処理
       - run: bun install
       - run: bunx next build
       - run: bun next export
 
       # 4. S3にアップロード
-      - run: aws s3 sync ./out s3://
+      - run: aws s3 sync ./out s3://${{ env.S3_BUCKET_NAME }}
