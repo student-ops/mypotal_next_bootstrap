@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import { AppProps } from "next/app";
 import Script from "next/script";
+import "@xterm/xterm/css/xterm.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

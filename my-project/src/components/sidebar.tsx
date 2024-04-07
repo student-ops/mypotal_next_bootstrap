@@ -11,7 +11,6 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
-  console.log(activeSection);
   const getClassName = (section: string) =>
     `fs-4 text-center ${
       activeSection === section ? "bg-white text-dark" : "text-white"

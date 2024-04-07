@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import { CSSTransition } from "react-transition-group";
 import Sidebar from "@/components/sidebar";
 import MainSections from "@/components/main_sections";
+import TerminalComponent from "@/components/term";
 import { Image } from "react-bootstrap";
 
 export default function HomePage() {
@@ -91,7 +92,8 @@ export default function HomePage() {
       <div id="container" className="w-100 px-2vw">
         <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
           <div id="content-container">
-            <Image src="/banner.jpg" alt="Effortion" id="bannerImage" />
+            <TerminalComponent />
+
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
