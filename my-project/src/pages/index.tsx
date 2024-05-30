@@ -75,7 +75,19 @@ export default function HomePage() {
   // Define the content of each section
 
   const FullScreen = (
-    <div className="d-flex flex-row-reverse vh-100 w-100 overflow-auto  bg-light">
+    <div className="d-flex flex-row vh-100 w-100 overflow-auto bg-light">
+      <div id="container" className="w-100 px-2vw">
+        <div id="body" className="w-100">
+          <div id="content-container">
+            <TerminalComponent />
+            {HomeContent}
+            <CustomComponent children={Section1Content} />
+            <CustomComponent children={Section2Content} />
+            <CustomComponent children={Section3Content} />
+          </div>
+          <Footer />
+        </div>
+      </div>
       <Sidebar
         activeSection={
           homeInView
@@ -89,19 +101,6 @@ export default function HomePage() {
             : ""
         }
       />
-      <div id="container" className="w-100 px-2vw">
-        <div id="body" className="col-7 col-sm-7 col-md-8 col-lg-9">
-          <div id="content-container">
-            <TerminalComponent />
-
-            {HomeContent}
-            <CustomComponent children={Section1Content} />
-            <CustomComponent children={Section2Content} />
-            <CustomComponent children={Section3Content} />
-          </div>
-          <Footer />
-        </div>
-      </div>
     </div>
   );
   const NormalScreen = (
