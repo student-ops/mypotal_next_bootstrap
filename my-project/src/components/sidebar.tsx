@@ -18,11 +18,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
 
   return (
     <div
-      className="col-sm-5 col-5 col-md-4 col-lg-3 position-fixed py-3 d-flex flex-column justify-content-between"
+      className="col-sm-5 col-5 col-md-4 col-lg-3 py-3 d-flex flex-column justify-content-between "
       style={{
         background: "#1e1e1e",
         overflow: "auto",
         height: "100vh",
+        position: "sticky",
+        top: 0,
         zIndex: 1,
       }}
     >
@@ -82,7 +84,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
               className={getClassName("link2")}
               style={{ borderTop: "1.5px solid #bfbfbf" }}
             >
-              MyWorks
+              Works
             </Nav.Link>
           </Nav.Item>
           <Nav.Item className="w-100">
