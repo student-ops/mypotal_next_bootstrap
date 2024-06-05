@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import { ListGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import SocialMediaList from "@/components/dry_sns_links";
 
 import {
   faCode,
@@ -10,31 +11,58 @@ import {
   faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
 
+const introduce_header = "h6 fw-bold";
 const Section1 = (
   <div>
-    <h1 className="fw-bold fs-2 mb-3">Hello World!!</h1>
-
-    <p>
-      ITと海が好きな情報系学生です。 <br />
-      OSSやクラウド技術が特に好きです。
-      <br />
-      色々な技術を触っています。
-      <br />
-      良いソフトウェアを作りたい思いが強いです。
-    </p>
+    <div className="introduce">
+      <div>
+        <img src="" alt="" />
+      </div>
+      <div>
+        <h1 className="h3 fw-bold">
+          Ryuta Sakamoto <span className="h4">(@stundent-ops)</span>
+        </h1>
+      </div>
+      <div>
+        <h2 className={introduce_header}>所属</h2>
+        <p>(◻)</p>
+      </div>
+      <div>
+        <h2 className={introduce_header}>好きな技術</h2>
+        <p>バックエンド全般／仮想化インフラ／OSS</p>
+      </div>
+      <div>
+        <h2 className={introduce_header}>趣味</h2>
+        <p>
+          プログラミング、ソフトウェア開発全般／ハッカソン参加／スポーツ観戦(サッカー、格闘技)
+        </p>
+      </div>
+    </div>
+    {/* <SocialMediaList /> */}
   </div>
 );
 
-const Section2 = (
-  <div>
-    <h1 className="fw-bold fs-2 mb-3">Likes</h1>
-    <p>IT、将棋、格闘技、ゲーム等が好きです</p>
-  </div>
-);
+// const Section2 = (
+//   <div>
+//     <h1 className="fw-bold fs-2 mb-3">Likes</h1>
+//     <b>趣味</b>
+//     <p>IT全般、サッカー、格闘技、ゲームなどが好きです</p>
+
+//     <b>好きなプログラミング言語</b>
+//     <ul>
+//       <li>Go</li>
+//       <p>軽量な並列処理</p>
+//       <li>Ruby</li>
+//       <p>文法が好き</p>
+//       <li>Linux</li>
+//       <li>クラウド</li>
+//     </ul>
+//   </div>
+// );
 
 const Section3 = (
   <div>
-    <h1 className="fw-bold fs-2 mb-3">MyWorks</h1>
+    <h1 className="fw-bold fs-2 mb-3">Works</h1>
     {/* <Row className="justify-content-center"> */}
     {/* <Col xs="auto"> */}
     <Container>
@@ -89,7 +117,7 @@ const Section3 = (
       <a href="#" className="image"></a>
       <div className="inner py-3" style={{ borderTop: "solid 1px #d1d1d1" }}>
         {/* <div className="inner "> */}
-        <div className="title_github d-flex  justify-content-between">
+        <div className="title_github d-flex justify-content-between">
           <a href="#" target="_blank" className="image">
             <h4>Goチャットサービス</h4>
             {/* <i className="fas fa-external-link-alt"></i> */}
@@ -201,9 +229,9 @@ const Section4 = (
 
 const sectionComponents: React.ReactNode[] = [
   Section1,
-  Section2,
-  Section4,
+  // Section2,
   Section3,
+  Section4,
 ];
 
 interface MergedComponentProps {
