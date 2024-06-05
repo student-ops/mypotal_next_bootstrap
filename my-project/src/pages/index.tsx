@@ -20,7 +20,7 @@ export default function HomePage() {
   });
 
   const { ref: link2Ref, inView: link2InView } = useInView({
-    threshold: 0.5,
+    threshold: 0.1,
   });
   const { ref: link3Ref, inView: link3InView } = useInView({
     threshold: 0.5,
@@ -93,18 +93,18 @@ export default function HomePage() {
         activeSection={
           homeInView
             ? "home"
-            : link1InView
-            ? "link1"
-            : link2InView
-            ? "link2"
             : link3InView
             ? "link3"
+            : link2InView
+            ? "link2"
+            : link1InView
+            ? "link1"
             : ""
         }
       />
     </div>
   );
-  const NormalScreen = (
+  const MobileScreen = (
     <div className="vh-100 overflow-auto bg-light w-100">
       <Header onMenuClick={handleMenuClick} isSidebarOpen={isSidebarOpen} />
       <div className="d-flex flex-row-reverse vh-95 overflow-auto bg-light">
@@ -146,5 +146,5 @@ export default function HomePage() {
   );
 
   // Pass the currently visible section to the Sidebar component
-  return windowWidth && windowWidth > 768 ? FullScreen : NormalScreen;
+  return windowWidth && windowWidth > 768 ? FullScreen : MobileScreen;
 }
