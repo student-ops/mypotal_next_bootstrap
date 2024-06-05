@@ -25,6 +25,7 @@ export default function HomePage() {
   const { ref: link3Ref, inView: link3InView } = useInView({
     threshold: 0.5,
   });
+
   const HomeContent = (
     <div id="home" ref={homeRef} className="pt-5 pb-3">
       {MainSections[0]}
@@ -40,12 +41,12 @@ export default function HomePage() {
   const Section2Content = (
     <div id="section-2" ref={link2Ref}>
       {/* Your link-2 content goes here */}
-      {MainSections[3]}
+      {MainSections[2]}
     </div>
   );
   const Section3Content = (
     <div id="section-3" ref={link3Ref}>
-      {MainSections[2]}
+      {MainSections[3]}
     </div>
   );
 
@@ -83,7 +84,7 @@ export default function HomePage() {
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
-            <CustomComponent children={Section3Content} />
+            {/* <CustomComponent children={Section3Content} /> */}
           </div>
           <Footer />
         </div>
@@ -136,7 +137,7 @@ export default function HomePage() {
             {HomeContent}
             <CustomComponent children={Section1Content} />
             <CustomComponent children={Section2Content} />
-            <CustomComponent children={Section3Content} />
+            {/* <CustomComponent children={Section3Content} /> */}
           </div>
           <Footer />
         </div>
