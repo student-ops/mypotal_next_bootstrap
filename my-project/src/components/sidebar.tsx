@@ -66,10 +66,10 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
         <Nav className="d-flex flex-column align-items-center mx-auto w-100">
           <Nav.Item className="w-100">
             <Nav.Link href="#home" className={getClassName("home")}>
-              About
+              About Me
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item className="w-100">
+          {/* <Nav.Item className="w-100">
             <Nav.Link
               href="#section-1"
               className={getClassName("link1")}
@@ -77,11 +77,11 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
             >
               Likes
             </Nav.Link>
-          </Nav.Item>
+          </Nav.Item> */}
           <Nav.Item className="w-100">
             <Nav.Link
-              href="#section-2"
-              className={getClassName("link2")}
+              href="#section-1"
+              className={getClassName("link1")}
               style={{ borderTop: "1.5px solid #bfbfbf" }}
             >
               Works
@@ -89,8 +89,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
           </Nav.Item>
           <Nav.Item className="w-100">
             <Nav.Link
-              href="#section-3"
-              className={getClassName("link3")}
+              href="#section-2"
+              className={getClassName("link2")}
               style={{ borderTop: "1.5px solid #bfbfbf" }}
             >
               Tech

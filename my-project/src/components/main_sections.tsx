@@ -92,12 +92,12 @@ const Section3 = (
           </a>
         </div>
         <a href="https://app.croud-crab.com">
-          <Image
+          {/* <Image
             src="/effosition_app.png"
             alt="Effortion"
             width="100%"
             className="rounded mt-2 mb-3"
-          />
+          /> */}
         </a>
 
         <p className="pb-4">
