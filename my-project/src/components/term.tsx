@@ -10,18 +10,23 @@ export default function TerminalComponent() {
     if (terminalRef.current && !terminalInstance.current) {
       terminalInstance.current = new Terminal({
         theme: {
-          background: "#300a24",
+          background: "#1e1e1e",
         },
       });
       terminalInstance.current.open(terminalRef.current);
       terminalInstance.current.resize(60, 10);
       terminalInstance.current.write(
-        "Welcome to \x1B[1;3;36mRyuta's Potal\x1B[0m $ "
+        " Hello World \x1B[1;3;36mWelcome!\x1B[0m"
       );
     }
   }, []);
   return (
-    <div className="w-full h-12">
+    <div
+      className="w-full h-12"
+      style={{
+        borderLeft: "1.5px solid #bfbfbf",
+      }}
+    >
       <div id="terminal" className="w-full h-full" ref={terminalRef} />
     </div>
   );
