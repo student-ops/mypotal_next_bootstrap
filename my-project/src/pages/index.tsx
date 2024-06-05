@@ -20,7 +20,7 @@ export default function HomePage() {
   });
 
   const { ref: link2Ref, inView: link2InView } = useInView({
-    threshold: 0.1,
+    threshold: 1,
   });
   const { ref: link3Ref, inView: link3InView } = useInView({
     threshold: 0.5,
@@ -91,14 +91,12 @@ export default function HomePage() {
       </div>
       <Sidebar
         activeSection={
-          homeInView
-            ? "home"
-            : link3InView
-            ? "link3"
+          link1InView
+            ? "link1"
             : link2InView
             ? "link2"
-            : link1InView
-            ? "link1"
+            : homeInView
+            ? "home"
             : ""
         }
       />
