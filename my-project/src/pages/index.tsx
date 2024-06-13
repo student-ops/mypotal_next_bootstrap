@@ -95,10 +95,10 @@ export default function HomePage() {
             ? "home"
             : link1InView
             ? "link1"
-            : link2InView
-            ? "link2"
             : link3InView
             ? "link3"
+            : link2InView
+            ? "link2"
             : ""
         }
       />
