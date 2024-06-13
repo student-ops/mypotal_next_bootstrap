@@ -57,7 +57,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
           <Row>
             <Col className="d-flex justify-content-center text-center">
               <p className="text-white">
-                ITと海が好きな情報系学生です。
+                情報系学部生です。
                 <br /> 🌐OSS 🦀カニが好きです。
               </p>
             </Col>
