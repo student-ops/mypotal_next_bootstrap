@@ -20,7 +20,7 @@ export default function HomePage() {
   });
 
   const { ref: link2Ref, inView: link2InView } = useInView({
-    threshold: 1,
+    threshold: 0.5,
   });
   const { ref: link3Ref, inView: link3InView } = useInView({
     threshold: 0.5,
