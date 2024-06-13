@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import { ListGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import skills from "@/components/contents/skills";
 import SocialMediaList from "@/components/dry_sns_links";
 
 import {
@@ -232,6 +233,7 @@ const sectionComponents: React.ReactNode[] = [
   // Section2,
   Section3,
   Section4,
+  skills,
 ];
 
 interface MergedComponentProps {

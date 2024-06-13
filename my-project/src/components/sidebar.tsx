@@ -96,6 +96,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
               Tech
             </Nav.Link>
           </Nav.Item>
+          <Nav.Item className="w-100">
+            <Nav.Link
+              href="#section-3"
+              className={getClassName("link3")}
+              style={{ borderTop: "1.5px solid #bfbfbf" }}
+            >
+              Skills
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </div>
       <div id="icons" className="d-flex px-3 justify-content-center">
