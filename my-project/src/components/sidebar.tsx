@@ -57,7 +57,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
           <Row>
             <Col className="d-flex justify-content-center text-center">
               <p className="text-white">
-                ITと海が好きな情報系学生です。
+                情報系学部生です。
                 <br /> 🌐OSS 🦀カニが好きです。
               </p>
             </Col>
@@ -94,6 +94,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
               style={{ borderTop: "1.5px solid #bfbfbf" }}
             >
               Tech
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item className="w-100">
+            <Nav.Link
+              href="#section-3"
+              className={getClassName("link3")}
+              style={{ borderTop: "1.5px solid #bfbfbf" }}
+            >
+              Skills
             </Nav.Link>
           </Nav.Item>
         </Nav>
