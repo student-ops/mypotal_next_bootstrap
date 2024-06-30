@@ -35,10 +35,9 @@ jobs:
       # 3. ビルド処理
       - name: Install and Build in my-project directory
         run: |
-          cd my-project
           bun install
           bunx next build
           bun next export
 
       # 4. S3にアップロード
-      - run: aws s3 sync ./my-project/out s3://${{ env.S3_BUCKET_NAME }}
+      - run: aws s3 sync ./out s3://${{ env.S3_BUCKET_NAME }}
